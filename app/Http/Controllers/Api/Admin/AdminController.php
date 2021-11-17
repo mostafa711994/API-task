@@ -13,7 +13,7 @@ class AdminController extends Controller
 {
    public function assignRolePermissionToUser(Request $request){
         if(auth()->user()->is_admin == 1){
-            $user = User::find($request->id);
+            $user = User::find($request->user_id);
 
             if($request->role_id){
 
